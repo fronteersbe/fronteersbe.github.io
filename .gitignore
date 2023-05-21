@@ -1,0 +1,16 @@
+# Dependencies
+/node_modules
+
+# Misc
+/_site
+
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# VSCode
+/.vscode
+.history

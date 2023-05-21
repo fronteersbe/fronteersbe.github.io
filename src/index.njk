@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fronteers meetups Belgium</title>
+    <script type="module" src="/assets/svg-icon-sprite.js"></script>
+  </head>
+  <body>
+    <header role="banner">
+      <h1>
+        <span class="sr-only">Fronteers</span>
+        <svg-icon
+          src="/assets/sprite.svg#logo"
+          width="300px"
+          viewBox="0 0 353 60"
+          aria-hidden="true"
+          class="logo"
+          focusable="false">
+        </svg-icon>
+          <span>meetups Belgium</span>
+      </h1>
+      <div class="social-media">
+        <span><b>Find us on:</b></span>
+        <ul class="social-media__list">
+          <li class="social-media__item">
+            <a class="social-media__link" 
+              href="https://twitter.com/fronteersbe"
+              target="_blank" 
+              rel="noopener noreferrer" >Twitter</a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" 
+              href="https://www.linkedin.com/company/fronteers"
+              target="_blank" 
+              rel="noopener noreferrer" >
+              LinkedIn</a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" 
+              href="https://www.meetup.com/fronteers-be/"
+              target="_blank" 
+              rel="noopener noreferrer" >
+            meetup</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main role="main">
+      <section class="introduction">
+        <p>
+          <strong>
+            Fronteers BE is the Belgian Division of Fronteers, an organisation with the mission
+            to professionalise the profession of front-end developer.
+          </strong>
+        </p>
+      </section>
+      <section class="events">
+        <div class="card">
+          <h2>Join an upcoming event</h2>
+          <ul class="event__list">
+            <li class="event__list-item">
+              <span>
+                <svg-icon
+                  src="/assets/sprite.svg#calendar"
+                  width="30px"
+                  viewBox="0 0 30 30"
+                  aria-hidden="true"
+                  focusable="false">
+                </svg-icon>
+              </span>
+              <a class="event__link" href="https://www.meetup.com/fronteers-be/events/292211299/">Tue 20 June iO - Ghent</a>
+            </li>
+            <li class="event__list-item">
+              <span>
+                <svg-icon
+                  src="/assets/sprite.svg#calendar"
+                  width="30px"
+                  viewBox="0 0 30 30"
+                  aria-hidden="true"
+                  focusable="false">
+                </svg-icon>
+              </span>
+              <a class="event__link" href="https://www.meetup.com/fronteers-be/events/291613466/">Thu 20 Sept Octoo* - Kortrijk</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="atmosphere">
+        <h2>Sniff up the atmosphere</h2>
+        <div class="image__group">
+          {% image {
+            className: "image portrait",
+            src: "src/assets/images/fronteersbe-itp-2022-1.jpg",
+            widths: [300, 550],
+            alt: "The still empty meetup space, with chairs set up to face the small stage and presenter screen. On the presenter screen a slide is visible introducting the Fronteers BE meetup." 
+          } %}
+          {% image {
+            className: "image landscape",
+            src: "src/assets/images/fronteersbe-itp-2022-4.jpg",
+            widths: [300, 550],
+            alt: "Louis (known as Mamboleoo on socials) presenting about SVG's and how we can make better use of them." 
+          } %}
+          {% image {
+            className: "image portrait",
+            src: "src/assets/images/fronteersbe-itp-2022-3.jpg",
+            widths: [300, 550],
+            alt: "A group of +-80 people listening attentively to the person at front who is presenting." 
+          } %}
+          {% image {
+            className: "image landscape",
+            src: "src/assets/images/fronteersbe-itp-2022-2.jpg",
+            widths: [300, 550],
+            alt: "Bram (known as Bramus on socials) caught in a dynamic pose while presenting about upcoming CSS features." 
+          } %}
+        </div>
+      </section>
+
+      <section class="support-us">
+        <div class="card">
+          <h2>Join an event as speaker</h2>
+          <p>
+            Interested in talking about a front-end related subject? Or maybe something front-end enthusiasts can relate to?<br><br> We welcome people of all levels.
+          </p>
+          <a class="card__cto" 
+            href="https://tally.so/r/waXWX3"
+            target="_blank"
+            rel="noopener noreferrer">
+            Leave your info</a>
+        </div>
+        <div class="card">
+          <h2>Host a Fronteers event</h2>
+          <p>
+            Are you part of a tech company with front-end developers amongst 
+            their ranks and interested in hosting an event? <strong>At the moment we are looking for meetup locations in East-Flanders.</strong></p>
+          <a class="card__cto" 
+            href="https://tally.so/r/3yL4pm"
+            target="_blank" 
+            rel="noopener noreferrer">
+            Submit company</a>
+        </div>
+      </section>
+      <section class="team">
+        <h2>The team behind the events</h2>
+        <div class="organisers">
+          <div class="organiser-profile">
+            {% image {
+             className: "image",
+             src: "src/assets/images/claudia.jpg",
+             widths: [200],
+             alt: ""
+             } %}
+            <h3>Claudia R</h3>
+            <ul>
+              <li>
+                <a href="https://twitter.com/claudia_rndrs"
+                  target="_blank" 
+                  rel="noopener noreferrer">Twitter</a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/claudia_rndrs"
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <div class="organiser-profile">
+            {% image {
+             className: "image",
+             src: "src/assets/images/ibe.jpg",
+             widths: [200],
+             alt: ""
+             } %}
+            <h3>Ibe V</h3>
+            <ul>
+              <li>
+                <a href="https://twitter.com/IbeVanmeenen"
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  Twitter</a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/ibe-vanmeenen/"
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h3>Any Questions?</h3>
+        <p>Reach out to
+          <a href="mailto:claudia@fronteers.nl">Claudia</a>
+          for anything event-related.</p>
+      </section>
+    </main>
+  </body>
+</html>
