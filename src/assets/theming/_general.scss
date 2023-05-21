@@ -1,0 +1,123 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "roboto";
+  font-size: var(--16px);
+
+  background: 
+    linear-gradient(45deg, #ffffff 25%, transparent 25%), 
+    linear-gradient(315deg, #ffffff 25%, transparent 25%),
+    linear-gradient(45deg, transparent 24%,var(--purple-color) 25%, var(--purple-color) 45%, transparent 45%), 
+    linear-gradient(315deg, transparent 24%,var(--purple-color) 25%, var(--purple-color) 45%, transparent 45%);
+  background-size: 0.8em 0.8em;
+  background-color: #ffffff;
+  opacity: 1
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
+  color: var(--main-fg-color);
+  font-size: var(--20px);
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 1em;
+
+  @include breakpoint-tablet {
+    max-width: 1200px;
+    padding: 0 2em;
+  }
+}
+
+p {
+  position: relative;
+
+  @include breakpoint-tablet {
+    max-width: 800px;
+  }
+}
+
+
+h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0 0 1em 0;
+}
+
+
+
+p {
+ line-height: 140%;
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+svg {
+  display: inline-block;
+}
+
+span {
+  vertical-align: middle;
+}
+
+a {
+  color: var(--main-fg-color);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+
+main {
+  padding: 4em 0 2em 0;
+}
+
+section + section {
+  margin-top: 7em;
+}
+
+.card {
+  background-color: var(--purple-color);
+  box-sizing: border-box;
+  border-radius: var(--radius);
+  display: inline-block;
+  max-width: 450px;
+  padding: 1em;
+  text-align: left;
+
+  a:hover {
+    color: var(--main-fg-color);
+    text-decoration: none;
+  }
+
+  @include breakpoint-tablet {
+    padding: 1.5em;
+  }
+}
+
+.card__cto {
+  padding-top: 1em;
+
+
+}
+

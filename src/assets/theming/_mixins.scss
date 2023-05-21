@@ -1,0 +1,23 @@
+:root {
+  --main-bg-color: white;
+  --main-fg-color: black;
+  --purple-color: #B7B7FD;
+
+  --10px: calc(10rem / 16);
+  --14px: 0.875rem;
+  --15px: 0.9375rem;
+  --16px: 1rem;
+  --17px: 1.0625rem;
+  --18px: 1.125rem;
+  --19px: 1.1875rem;
+  --20px: 1.25rem;
+  --21px: 1.3125rem;
+  --40px: calc(40rem / 16);
+
+  --radius: calc(12rem / 16);
+}
+
+
+@mixin breakpoint-tablet {
+  @media screen and (min-width: 768px) { @content };
+}

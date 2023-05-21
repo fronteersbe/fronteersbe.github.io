@@ -1,0 +1,174 @@
+/*====================*/
+/*  Section styling   */
+/*====================*/
+
+section {
+  text-align: center;
+
+  
+  &:not(.atmosphere) {
+    max-width: 1200px;
+  }
+}
+
+
+/*===========================*/
+/*    Introduction section   */
+/*===========================*/
+
+section.introduction p {
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @include breakpoint-tablet {
+    font-size: calc(22rem /16);
+  }
+}
+
+/*======================*/
+/*    Events section    */
+/*======================*/
+
+section.events {
+  text-align: center;
+}
+
+.event__list-item {
+  span {
+    display: inline-block;
+    line-height: 0;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  + .event__list-item {
+    margin-top: 1em;
+  }
+}
+
+/*========================*/
+/*   Atmosphere section   */
+/*========================*/
+
+section.atmosphere {
+
+  .image__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      position: relative;
+      height: auto;
+      width: 90%;
+    }
+
+    @include breakpoint-tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1vw;
+
+      img {
+        width: auto;
+        height: 30vw;
+        max-height: 400px;
+
+        &:nth-child(1) {
+          border-top-left-radius: var(--radius);
+        }
+
+        &:nth-child(2) {
+          border-top-right-radius: var(--radius);
+        }
+
+        &:nth-child(3) {
+          order: 4;
+          border-bottom-right-radius: var(--radius);
+        }
+
+        &:nth-child(4) {
+          border-bottom-left-radius: var(--radius);
+        }
+      }
+
+    }
+
+  }
+}
+
+/*=====================*/
+/*   Support section   */
+/*=====================*/
+
+section.support-us {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+
+  .card {
+    display: inline-block;
+    min-width: 300px;
+    position: relative;
+    padding-bottom: 4em;
+
+    &__cto {
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 1.5em;
+    }
+  }
+}
+
+
+
+
+/*=======================*/
+/*     Team section      */
+/*=======================*/
+
+section.team {
+  text-align: center;
+}
+
+
+.organisers { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto 7em auto;
+  gap: 2em;
+
+  @include breakpoint-tablet {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.organiser-profile {
+  flex: 1; 
+
+  @include breakpoint-tablet {
+    flex: none;
+  }
+
+  img {
+    height: auto;
+    width: 200px;
+  }
+  
+  ul li {
+  display: inline-block;
+
+    + li {
+      margin-left: 10px;
+    }
+  }
+}
