@@ -14,7 +14,7 @@
     "debug": "DEBUG=* npx eleventy",
     "buildprod:sass": "sass  --no-source-map --style=compressed src/assets/theming:_site/assets",
     "buildprod:eleventy": "ELEVENTY_ENV=production eleventy",
-    "buildprod": "npm run buildprod:*"
+    "buildprod": "npm-run-all buildprod:*"
   },
   "author": {
     "name": "Fronteers BE",
