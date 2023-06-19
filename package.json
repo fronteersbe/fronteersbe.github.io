@@ -11,7 +11,10 @@
     "build:sass": "sass  --no-source-map --style=compressed src/assets/theming:_site/assets",
     "start": "npm-run-all build:sass generate:sprite --parallel watch:*",
     "build": "npm-run-all build:*",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "buildprod:sass": "sass  --no-source-map --style=compressed src/assets/theming:_site/assets",
+    "buildprod:eleventy": "ELEVENTY_ENV=production eleventy",
+    "buildprod": "npm run buildprod:*"
   },
   "author": {
     "name": "Fronteers BE",
