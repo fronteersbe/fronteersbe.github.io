@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fronteers meetups Belgium</title>
+    <script type="module" src="/assets/svg-icon-sprite.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link data-href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"><style data-href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap'>/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xFIzIXKMnyrYk.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xMIzIXKMnyrYk.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xEIzIXKMnyrYk.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xLIzIXKMnyrYk.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xHIzIXKMnyrYk.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xGIzIXKMnyrYk.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xIIzIXKMny.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+
+    <link rel="stylesheet" href="/assets/theme.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <h1>
+        <span class="sr-only">Fronteers</span>
+        <svg-icon
+          src="/assets/sprite.svg#logo"
+          width="300px"
+          viewBox="0 0 353 60"
+          aria-hidden="true"
+          class="logo"
+          focusable="false">
+        </svg-icon>
+          <span>meetups Belgium</span>
+      </h1>
+      <div class="social-media">
+        <span><b>Find us on:</b></span>
+        <ul class="social-media__list">
+          <li class="social-media__item">
+            <a class="social-media__link" 
+              href="https://twitter.com/fronteersbe"
+              target="_blank" 
+              rel="noopener noreferrer" >Twitter</a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" 
+              href="https://www.linkedin.com/company/fronteers"
+              target="_blank" 
+              rel="noopener noreferrer" >
+              LinkedIn</a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" 
+              href="https://www.meetup.com/fronteers-be/"
+              target="_blank" 
+              rel="noopener noreferrer" >
+            meetup</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main role="main">
+      <section class="introduction">
+        <p>
+          <strong>
+            Fronteers BE is the Belgian Division of Fronteers, an organisation with the mission
+            to professionalise the profession of front-end developer.
+          </strong>
+        </p>
+      </section>
+      <section class="events">
+        <div class="card">
+          <h2>Join an upcoming event</h2>
+          <ul class="event__list">
+            <li class="event__list-item">
+              <span>
+                <svg-icon
+                  src="/assets/sprite.svg#calendar"
+                  width="30px"
+                  viewBox="0 0 30 30"
+                  aria-hidden="true"
+                  focusable="false">
+                </svg-icon>
+              </span>
+              <a class="event__link" href="https://www.meetup.com/fronteers-be/events/292211299/">Tue 20 June iO - Ghent</a>
+            </li>
+            <li class="event__list-item">
+              <span>
+                <svg-icon
+                  src="/assets/sprite.svg#calendar"
+                  width="30px"
+                  viewBox="0 0 30 30"
+                  aria-hidden="true"
+                  focusable="false">
+                </svg-icon>
+              </span>
+              <a class="event__link" href="https://www.meetup.com/fronteers-be/events/291613466/">Thu 20 Sept Octoo* - Kortrijk</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="atmosphere">
+        <h2>Sniff up the atmosphere</h2>
+        <div class="image__group">
+          <picture><source type="image/webp" srcset="/assets/images/generated/KttLqa96N0-300.webp 300w, /assets/images/generated/KttLqa96N0-550.webp 550w" sizes="(min-width: 100px) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/generated/KttLqa96N0-300.jpeg 300w, /assets/images/generated/KttLqa96N0-550.jpeg 550w" sizes="(min-width: 100px) 50vw, 100vw"><img class="image portrait" alt="The still empty meetup space, with chairs set up to face the small stage and presenter screen. On the presenter screen a slide is visible introducting the Fronteers BE meetup." loading="lazy" decoding="async" src="/assets/images/generated/KttLqa96N0-300.jpeg" width="550" height="733"></picture>
+          <picture><source type="image/webp" srcset="/assets/images/generated/y6EdAxNEza-300.webp 300w, /assets/images/generated/y6EdAxNEza-550.webp 550w" sizes="(min-width: 100px) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/generated/y6EdAxNEza-300.jpeg 300w, /assets/images/generated/y6EdAxNEza-550.jpeg 550w" sizes="(min-width: 100px) 50vw, 100vw"><img class="image landscape" alt="Louis (known as Mamboleoo on socials) presenting about SVG's and how we can make better use of them." loading="lazy" decoding="async" src="/assets/images/generated/y6EdAxNEza-300.jpeg" width="550" height="412"></picture>
+          <picture><source type="image/webp" srcset="/assets/images/generated/_gmLe9muF1-300.webp 300w, /assets/images/generated/_gmLe9muF1-550.webp 550w" sizes="(min-width: 100px) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/generated/_gmLe9muF1-300.jpeg 300w, /assets/images/generated/_gmLe9muF1-550.jpeg 550w" sizes="(min-width: 100px) 50vw, 100vw"><img class="image portrait" alt="A group of +-80 people listening attentively to the person at front who is presenting." loading="lazy" decoding="async" src="/assets/images/generated/_gmLe9muF1-300.jpeg" width="550" height="733"></picture>
+          <picture><source type="image/webp" srcset="/assets/images/generated/lP_QDq6nvn-300.webp 300w, /assets/images/generated/lP_QDq6nvn-550.webp 550w" sizes="(min-width: 100px) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/generated/lP_QDq6nvn-300.jpeg 300w, /assets/images/generated/lP_QDq6nvn-550.jpeg 550w" sizes="(min-width: 100px) 50vw, 100vw"><img class="image landscape" alt="Bram (known as Bramus on socials) caught in a dynamic pose while presenting about upcoming CSS features." loading="lazy" decoding="async" src="/assets/images/generated/lP_QDq6nvn-300.jpeg" width="550" height="412"></picture>
+        </div>
+      </section>
+
+      <section class="support-us">
+        <div class="card">
+          <h2>Join an event as speaker</h2>
+          <p>
+            Interested in talking about a front-end related subject? Or maybe something front-end enthusiasts can relate to?<br><br> We welcome people of all levels.
+          </p>
+          <a class="card__cto" 
+            href="https://tally.so/r/waXWX3"
+            target="_blank"
+            rel="noopener noreferrer">
+            Leave your info</a>
+        </div>
+        <div class="card">
+          <h2>Host a Fronteers event</h2>
+          <p>
+            Are you part of a tech company with front-end developers amongst 
+            their ranks and interested in hosting an event? <strong>At the moment we are looking for meetup locations in East-Flanders.</strong></p>
+          <a class="card__cto" 
+            href="https://tally.so/r/3yL4pm"
+            target="_blank" 
+            rel="noopener noreferrer">
+            Submit company</a>
+        </div>
+      </section>
+      <section class="team">
+        <h2>The team behind the events</h2>
+        <div class="organisers">
+          <div class="organiser-profile">
+            <picture><source type="image/webp" srcset="/assets/images/generated/UQQIRqiT0g-200.webp 200w" sizes="(min-width: 100px) 50vw, 100vw"><img class="image" alt="" loading="lazy" decoding="async" src="/assets/images/generated/UQQIRqiT0g-200.jpeg" width="200" height="200"></picture>
+            <h3>Claudia R</h3>
+            <ul>
+              <li>
+                <a href="https://twitter.com/claudia_rndrs"
+                  target="_blank" 
+                  rel="noopener noreferrer">Twitter</a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/claudia_rndrs"
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <div class="organiser-profile">
+            <picture><source type="image/webp" srcset="/assets/images/generated/s6VivOIiFl-200.webp 200w" sizes="(min-width: 100px) 50vw, 100vw"><img class="image" alt="" loading="lazy" decoding="async" src="/assets/images/generated/s6VivOIiFl-200.jpeg" width="200" height="200"></picture>
+            <h3>Ibe V</h3>
+            <ul>
+              <li>
+                <a href="https://twitter.com/IbeVanmeenen"
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  Twitter</a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/ibe-vanmeenen/"
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h3>Any Questions?</h3>
+        <p>Reach out to
+          <a href="mailto:claudia@fronteers.nl">Claudia</a>
+          for anything event-related.</p>
+      </section>
+    </main>
+  </body>
+</html>
