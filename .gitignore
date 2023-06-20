@@ -2,7 +2,7 @@
 /node_modules
 
 # Misc
-/_site
+/public
 
 
 # Sass

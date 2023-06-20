@@ -1,8 +1,9 @@
-name: Build & Deploy
+name: Build & Deploy Eleventy
 
 on:
   push:
-    branches: ['main']
+    branches:
+      - main
 
   workflow_dispatch:
     inputs:
@@ -11,18 +12,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: ['>=16.x']
-
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js current
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          node-version: current
 
       - name: Install packages
         run: npm ci
@@ -31,7 +27,8 @@ jobs:
         run: npm run buildprod
 
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.8.0
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           allow_empty_commit: true
+          publish_dir: public
