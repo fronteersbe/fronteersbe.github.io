@@ -21,7 +21,7 @@ module.exports = (eleventyConfig) => {
     const sizes = "(min-width: 100px) 50vw, 100vw"
     const metadata =  await Image(imageObj.src, {
         formats: ["webp", "jpeg"],
-        outputDir: "./_site/assets/images/generated/",
+        outputDir: "./public/assets/images/generated/",
         urlPath: "/assets/images/generated/",
         widths: widths
     })
