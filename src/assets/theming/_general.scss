@@ -89,7 +89,14 @@ ul, ol {
 
 
 main {
-  padding: 4em 0 2em 0;
+  padding: 4em 0;
+}
+
+footer {
+  border-top: 1px solid #eee;
+  font-size: var(--16px);
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 section + section {

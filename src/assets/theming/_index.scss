@@ -31,6 +31,10 @@ section.introduction p {
 
 section.events {
   text-align: center;
+
+  .card {
+    max-width: 500px;
+  }
 }
 
 .event__list-item {
@@ -158,14 +162,22 @@ section.team {
 }
 
 .organiser-profile {
-  flex: 1; 
+  flex: 1;
+
+  h3 {
+    margin-top: 0.7rem;;
+  }
 
   @include breakpoint-tablet {
     flex: none;
   }
 
+  picture {
+    display: inline-block;
+    font-size: 0;
+  }
+
   img {
-    height: auto;
     width: 200px;
   }
   
@@ -175,5 +187,33 @@ section.team {
     + li {
       margin-left: 10px;
     }
+  }
+
+  .image {
+    background-color: var(--purple-color);
+    border-radius: var(--radius);
+    height: 200px;
+    width: 200px;
+
+    &__placeholder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      span {
+        color: white;
+        font-size: 5rem;
+        font-weight: bold;
+        line-height: 1;
+        white-space: nowrap;
+        padding-top: 10px;       
+      }
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 200px;
+    text-align: left;
   }
 }
