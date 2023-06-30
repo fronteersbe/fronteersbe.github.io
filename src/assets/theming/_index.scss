@@ -149,27 +149,17 @@ section.team {
 
 
 .organisers { 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: 0 auto 7em auto;
-  gap: 2em;
-
-  @include breakpoint-tablet {
-    flex-direction: row;
-    justify-content: center;
-  }
+  gap: 4em 2vw;
+  justify-items: center;
 }
 
 .organiser-profile {
-  flex: 1;
 
   h3 {
     margin-top: 0.7rem;;
-  }
-
-  @include breakpoint-tablet {
-    flex: none;
   }
 
   picture {

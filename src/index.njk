@@ -55,7 +55,7 @@
       <section class="introduction">
         <p>
           <strong>
-            Fronteers BE is the Belgian Division of Fronteers, an organisation with the mission
+            Fronteers BE is the Belgian division of Fronteers, an organisation with the mission
             to professionalise the profession of front-end developer.
           </strong>
         </p>
@@ -147,8 +147,8 @@
       </section>
       <section class="team">
         <h2>The team behind the events</h2>
-        <div class="organisers">
-          <div class="organiser-profile">
+        <ul class="organisers">
+          <li class="organiser-profile">
             {% image {
              className: "image",
              src: "src/assets/images/claudia.jpg",
@@ -169,8 +169,8 @@
                   LinkedIn</a>
               </li>
             </ul>
-          </div>
-          <div class="organiser-profile">
+          </li>
+          <li class="organiser-profile">
             {% image {
              className: "image",
              src: "src/assets/images/ibe.jpg",
@@ -192,19 +192,42 @@
                   LinkedIn</a>
               </li>
             </ul>
-          </div>
-           <div class="organiser-profile">
+          </li>
+          <li class="organiser-profile">
+            {% image {
+             className: "image",
+             src: "src/assets/images/thomas.jpg",
+             widths: [200],
+             alt: ""
+             } %}
+            <h3>Thomas V</h3>
+            <ul>
+              <li>
+                <a href="https://twitter.com/thomasverleye"
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  Twitter</a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/thomas-verleye/"
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  LinkedIn</a>
+              </li>
+            </ul>
+          </li>
+          <li class="organiser-profile">
             <picture class="image image__placeholder">
               <span>🤩</span>
             </picture>
             <h3>You?</h3>
             <ul>
               <li>
-                <p>We are looking for team members to help organise events in Antwerp, Limburg and Flemish Brabant. Contact Claudia for info.</p>
+                <p>We are looking for team members to help organise events in Antwerp, Limburg and Flemish Brabant. <strong>Contact Claudia for info</strong>.</p>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+        </ul>
         <h3>Any Questions?</h3>
         <p>Reach out to
           <a href="mailto:claudia@fronteers.nl">Claudia</a>
