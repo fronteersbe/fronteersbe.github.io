@@ -18,7 +18,8 @@ jobs:
       - name: Use Node.js current
         uses: actions/setup-node@v3
         with:
-          node-version: current
+          # avoid sass issue
+          node-version: "20.x"
 
       - name: Install packages
         run: npm ci
