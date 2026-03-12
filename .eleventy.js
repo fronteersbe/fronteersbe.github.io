@@ -1,8 +1,11 @@
 const eleventyGoogleFonts = require('eleventy-google-fonts')
 const Image = require('@11ty/eleventy-img')
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(eleventyGoogleFonts)
+  eleventyConfig.addPlugin(UpgradeHelper)
 
   /*===================================================*/
   /* files that need to be copied to the build folder  */
