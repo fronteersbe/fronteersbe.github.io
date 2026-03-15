@@ -20,7 +20,7 @@ section.introduction p {
   box-sizing: border-box;
   margin: 0 auto;
 
-  @include breakpoint-tablet {
+  @media screen and (min-width: 768px) {
     font-size: calc(22rem /16);
   }
 }
@@ -45,7 +45,7 @@ section.events {
     vertical-align: middle;
   }
 
-  a {
+  a, p {
     display: inline-block;
     vertical-align: middle;
   }
@@ -74,7 +74,7 @@ section.atmosphere {
       width: 90%;
     }
 
-    @include breakpoint-tablet {
+    @media screen and (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 1vw;

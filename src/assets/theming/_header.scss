@@ -10,6 +10,7 @@ header {
 
     svg {
       display: block;
+      width: 300px;
     }
 
   }
@@ -25,7 +26,7 @@ header {
     }
   }
 
-  @include breakpoint-tablet {
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -38,42 +39,5 @@ header {
       margin-top: 0;
     }
   }
+
 }
-
-// header {
-//   max-width: 1400px;
-//   padding-top: var(--40px);
-
-//   h1 {
-//     margin-bottom: 1.5em;
-//   }
-
-//   @media only screen and (min-width: 760px) {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-
-//     h1 {
-//       margin: 0;
-//     }
-//   }
-// }
-
-// h1 svg {
-//   display: block;
-//   height: 60px;
-//   width: auto;
-// }
-
-// .logo svg {
-//   @media only screen and (max-width: 600px) {
-//     max-width: 80vw;
-//   }
-// }
-
-// h1 span {
-//   display: block;
-//   font-size: calc(24rem /16);
-//   text-align: right;
-// }
-
