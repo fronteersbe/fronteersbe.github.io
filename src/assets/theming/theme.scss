@@ -1,6 +1,5 @@
 
-@import "mixins";
-@import "general";
-@import "header";
-@import "index";
-
+@use "variables";
+@use "general";
+@use "header";
+@use "index";
