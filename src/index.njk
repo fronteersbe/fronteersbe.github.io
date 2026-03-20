@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fronteers Belgium organises casual front-end development meetups across Flanders. Join us to learn, share, and connect with fellow front-end developers.">
     <title>Fronteers meetups Belgium</title>
-    <script type="module" src="/assets/svg-icon-sprite.js"></script>
-    {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap' %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{'/assets/theme.css' | url }}" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤩</text></svg>">
@@ -15,15 +17,8 @@
     <header role="banner">
       <h1>
         <span class="sr-only">Fronteers</span>
-        <svg-icon
-          src="/assets/sprite.svg#logo"
-          width="300px"
-          viewBox="0 0 353 60"
-          aria-hidden="true"
-          class="logo"
-          focusable="false">
-        </svg-icon>
-          <span>meetups Belgium</span>
+        {% icon "custom:logo", class="logo"  %}
+        <span>meetups Belgium</span>
       </h1>
       <nav aria-labelledby="social-media-label" class="social-media">
         <span id="social-media-label"><b>Find us on:</b></span>
@@ -64,29 +59,23 @@
         <div class="card">
           <h2>Join an upcoming event</h2>
           <ul class="event__list">
-            <li class="event__list-item">
+            {# <li class="event__list-item">
               <span>
-                <svg-icon
-                  src="/assets/sprite.svg#calendar"
-                  width="30px"
-                  viewBox="0 0 30 30"
-                  aria-hidden="true"
-                  focusable="false">
-                </svg-icon>
+                {% icon "custom:calendar" %}
               </span>
               <a class="event__link" href="https://www.meetup.com/fronteers-be/events/313061874/" target="_blank">
                 <time datetime="2024-03-07T18:00">Thu 12 Mar</time> Craftzing - Ghent
               </a>
+            </li> #}
+            <li class="event__list-item">
+              <span>
+                {% icon "custom:calendar" %}
+              </span>
+              <p class="event__placeholder">Currently planning our next meetup</p>
             </li>
             <li class="event__list-item">
               <span>
-                <svg-icon
-                  src="/assets/sprite.svg#microphone"
-                  width="30px"
-                  viewBox="0 0 30 30"
-                  aria-hidden="true"
-                  focusable="false">
-                </svg-icon>
+                {% icon "custom:microphone" %}
               </span>
               <a class="event__link" href="https://tally.so/r/waXWX3" target="_blank">
                 Want to speak at a future meetup?
@@ -95,7 +84,7 @@
           </ul>
         </div>
       </section>
-      <section>
+      <section class="community-survey">
         <div>
         <p><strong>Do you have a minute to spare? We have a few questions for our community members.</strong><br><a target="_blank" href="https://tally.so/r/rjOy7M">You can find them here.</a></p>
         </div>
@@ -103,30 +92,26 @@
       <section class="atmosphere">
         <h2>Sniff up the atmosphere</h2>
         <div class="image__group">
-          {% image {
-            className: "image portrait",
-            src: "src/assets/images/fronteersbe-itp-2022-1.jpg",
-            widths: [300, 550],
-            alt: "The still empty meetup space, with chairs set up to face the small stage and presenter screen. On the presenter screen a slide is visible introducting the Fronteers BE meetup." 
-          } %}
-          {% image {
-            className: "image landscape",
-            src: "src/assets/images/fronteersbe-io-2024.png",
-            widths: [300, 550],
-            alt: "Emma facilitating a discussion around the ethical responsibilities of software developers." 
-          } %}
-          {% image {
-            className: "image portrait",
-            src: "src/assets/images/fronteersbe-io-2024-2.png",
-            widths: [300, 550],
-            alt: "Elian giving a talk about 'Going full stack with Astro'" 
-          } %}
-          {% image {
-            className: "image landscape",
-            src: "src/assets/images/fronteersbe-whale-2024.png",
-            widths: [300, 550],
-            alt: "A dark room with a Fronteers screen in the front, due to the light contrast of the screen in the dark room there black silhouets visible of the people sitting in front of the screen. The room is also covered in a blue glow of a neon light that says the word 'whale' and has a small stylized whale icon next to it" 
-          } %}
+          <img
+            class="image portrait"
+            src="/assets/images/fronteersbe-itp-2022-1.jpg" 
+            alt="The still empty meetup space, with chairs set up to face the small stage and presenter screen. On the presenter screen a slide is visible introducting the Fronteers BE meetup." 
+          />
+          <img
+            class="image landscape"
+            src="/assets/images/fronteersbe-io-2024.png"
+            alt="Emma facilitating a discussion around the ethical responsibilities of software developers."
+          />
+          <img
+            class="image portrait"
+            src="/assets/images/fronteersbe-io-2024-2.png"
+            alt="Elian giving a talk about 'Going full stack with Astro'" 
+          />
+          <img
+            class="image landscape"
+            src="/assets/images/fronteersbe-craftzing-2026.png"
+            alt="Claudia introducing the new Fronteers Belgium team!" 
+          />
         </div>
       </section>
 
@@ -158,12 +143,12 @@
         <h2>The team behind the events</h2>
         <ul class="organisers">
           <li class="organiser-profile">
-            {% image {
-             className: "image",
-             src: "src/assets/images/claudia.jpg",
-             widths: [200],
-             alt: ""
-             } %}
+            <img 
+             class="image"
+             src="/assets/images/claudia.jpg"
+             {# widths: [200], #}
+             alt="Headshot of Claudia R"
+             />
             <h3>Claudia R</h3>
             <ul>
               <li>
@@ -175,12 +160,12 @@
             </ul>
           </li>
           <li class="organiser-profile">
-            {% image {
-             className: "image",
-             src: "src/assets/images/joeri.png",
-             widths: [200],
-             alt: ""
-             } %}
+            <img 
+             class="image"
+             src="/assets/images/joeri.png"
+             {# widths= [200], #}
+             alt="Headshot of Joeri S"
+             />
             <h3>Joeri S</h3>
             <ul>
               <li>
@@ -192,12 +177,12 @@
             </ul>
           </li>
           <li class="organiser-profile">
-            {% image {
-             className: "image",
-             src: "src/assets/images/rune.png",
-             widths: [200],
-             alt: ""
-             } %}
+            <img 
+             class="image"
+             src="/assets/images/rune.png"
+             {# widths: [200], #}
+             alt="Headshot of Rune D"
+             />
             <h3>Rune D</h3>
             <ul>
               <li>
@@ -209,12 +194,12 @@
             </ul>
           </li>
           <li class="organiser-profile">
-            {% image {
-             className: "image",
-             src: "src/assets/images/vu.png",
-             widths: [200],
-             alt: ""
-             } %}
+            <img 
+             class="image"
+             src="/assets/images/vu.png"
+             {# widths: [200], #}
+             alt="Headshot of Vuong (Vu) H"
+             />
             <h3>Vu H</h3>
             <ul>
               <li>
@@ -226,12 +211,12 @@
             </ul>
           </li>
           <li class="organiser-profile">
-            {% image {
-             className: "image",
-             src: "src/assets/images/yannick.png",
-             widths: [200],
-             alt: ""
-             } %}
+            <img 
+             class="image"
+             src="/assets/images/yannick.png"
+             {# widths: [200], #}
+             alt="Headshot of Yannick H"
+             />
             <h3>Yannick H</h3>
             <ul>
               <li>

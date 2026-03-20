@@ -1,47 +1,31 @@
-const eleventyGoogleFonts = require('eleventy-google-fonts')
-const Image = require('@11ty/eleventy-img')
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+import pluginIcons from "eleventy-plugin-icons"
 
+const imageConfig = {
+  extensions: "html",
+  formats: ["webp", "jpeg"],
+  widths: [300, 600, 900, "auto"],
+  defaultAttributes: {
+    loading: "lazy",
+    decoding: "async",
+    sizes: "100vw",
+  },
+  urlPath: "assets/images/",
+};
 
-module.exports = (eleventyConfig) => {
-  eleventyConfig.addPlugin(eleventyGoogleFonts)
-  eleventyConfig.addPlugin(UpgradeHelper)
+export default function (eleventyConfig) {
+  /*================================*/
+  /*   plugins and configurations   */
+  /*================================*/
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, imageConfig)
+  eleventyConfig.addPlugin(pluginIcons,{ 
+    sources: [{ name: "custom", path: "./src/assets/icons" }],
+  })
 
   /*===================================================*/
   /* files that need to be copied to the build folder  */
   /*===================================================*/
-  eleventyConfig.addPassthroughCopy('./src/assets/images')
-  eleventyConfig.addPassthroughCopy('./src/assets/icons')
-  eleventyConfig.addPassthroughCopy('./src/assets/sprite.svg')
-  eleventyConfig.addPassthroughCopy({
-      'node_modules/svg-icon-sprite/dist/svg-icon-sprite.js': 'assets/svg-icon-sprite.js'
-  })
-
-  const imageShortcode = async (imageObj = {}) => {
-    const widths = imageObj.widths || [300, 600, 900, 1200]
-    const className = imageObj.className || "image"
-  
-    const sizes = "(min-width: 100px) 50vw, 100vw"
-    const metadata =  await Image(imageObj.src, {
-        formats: ["webp", "jpeg"],
-        outputDir: "./public/assets/images/generated/",
-        urlPath: "/assets/images/generated/",
-        widths: widths
-    })
-    const alt = imageObj.alt;
-  
-    const imageAttributes = {
-        class: className,
-        alt,
-        sizes,
-        loading: "lazy",
-        decoding: "async",
-    }
-  
-    return Image.generateHTML(metadata, imageAttributes)
-  }
-
-  eleventyConfig.addAsyncShortcode('image', imageShortcode)
+  eleventyConfig.addPassthroughCopy("./src/assets/images");
 
   return {
     dir: {
