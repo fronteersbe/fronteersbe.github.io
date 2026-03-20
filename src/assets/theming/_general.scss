@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +26,7 @@ body {
   margin: 0 auto;
   padding: 0 1em;
 
-  @include breakpoint-tablet {
+  @media screen and (min-width: 768px) {
     max-width: 1200px;
     padding: 0 2em;
   }
@@ -36,7 +35,7 @@ body {
 p {
   position: relative;
 
-  @include breakpoint-tablet {
+  @media screen and (min-width: 768px) {
     max-width: 800px;
   }
 }
@@ -117,14 +116,12 @@ section + section {
     text-decoration: none;
   }
 
-  @include breakpoint-tablet {
+  @media screen and (min-width: 768px) {
     padding: 1.5em;
   }
 }
 
 .card__cto {
   padding-top: 1em;
-
-
 }
 
